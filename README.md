@@ -1,9 +1,13 @@
 # ArchLinux-E-Mail-Server-Install-Script
 
 A script designed to automate postfix, dovecot instalation and configuration on ArchLinux.
+
 The script is aimed at creating a configuration that applies to most users' needs.
+
 I've tried to secure postfix and dovecot with the best practices I found online.
+
 If any improvements come to mind please feel free to share.
+
 
 Features:
   -Postfix configured with STARTTLS on port 25 and 587
