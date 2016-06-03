@@ -21,5 +21,5 @@ Features:
   
   -Configuration of virtual users, encrypted passwords 
   
-  -Automatic folder creation and subscribtion: Sent, Drafts, Junk, Trash; for Dovecot
+  -Automatic folder creation and subscription: Sent, Drafts, Junk, Trash; for Dovecot
   
