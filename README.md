@@ -10,9 +10,16 @@ If any improvements come to mind please feel free to share.
 
 
 Features:
+
   -Postfix configured with STARTTLS on port 25 and 587
+  
   -Dovecot configured with STARTTLS on port 993 and SSL/TLS on 143
+  
   -Generation of self signed SSL certificate 
+  
   -Protection against #POODLE, #FREAK/Logjam attacks by using 2048 bit DH group for both postfix and dovecot
+  
   -Configuration of virtual users, encrypted passwords 
+  
   -Automatic folder creation and subscribtion: Sent, Drafts, Junk, Trash; for Dovecot
+  
