@@ -370,7 +370,7 @@ query = SELECT concat('$domain/',uid,'/') FROM oc_users WHERE uid='%s'
 "
 
 echo "$vmailbox_db" > /etc/postfix/vmailbox-db
-chmod 400 /etc/postfix/vmailbox-db
+chmod 600 /etc/postfix/vmailbox-db
 
 #Enable STARTTLS on port 587
 sed -i 's/#submission/submission/g' /etc/postfix/master.cf
@@ -385,6 +385,10 @@ printText "Reloading aliases and generating .db files"
 postalias /etc/postfix/aliases
 postmap   /etc/postfix/vmailbox-db
 postmap   /etc/postfix/virtual
+
+chown postfix:postfix /etc/postfix/vmailbox-db
+chown postfix:postfix /etc/postfix/vmailbox-db.db
+chmod 600 /etc/postfix/vmailbox-db.db
 
 
 
@@ -485,7 +489,7 @@ password_query = SELECT concat(uid,'@$domain') as user, password FROM oc_users W
 "
 
 echo "$virtual_users_db" > /etc/dovecot/virtual-users-db
-chmod 400 /etc/dovecot/virtual-users-db
+chmod 600 /etc/dovecot/virtual-users-db
 
 
 printText "Starting postfix, dovecot and nginx web server"
