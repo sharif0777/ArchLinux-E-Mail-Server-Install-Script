@@ -424,7 +424,7 @@ service auth {
   }
 }
 
-mail_location = maildir:/mnt/usb/mail/%d/%n
+mail_location = maildir:$mailPath/%d/%n
 
 passdb  {
   driver=sql
